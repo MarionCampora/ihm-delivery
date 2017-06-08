@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/image34"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignEnd="@+id/logo34"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/logo34"
+            android:layout_gravity="center"
+            android:cropToPadding="false" />
+
+        <ImageView
+            android:id="@+id/logo34"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_toStartOf="@+id/unlike_button"
+            android:cropToPadding="false"
+            android:src="@drawable/nouveautes"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/price34"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignEnd="@+id/title34"
+            android:layout_below="@+id/title34"
+            android:layout_weight="0.11"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/title34"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/image34"
+            android:layout_marginTop="13dp"
+            android:layout_toStartOf="@+id/like_button"
+            android:layout_weight="0.11"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/unlike_button"
+            android:layout_alignTop="@+id/image34"
+            android:background="@color/colorPrimary"
+            android:text="J'aime"
+            android:textColor="@color/cardview_light_background" />
+
+        <Button
+            android:id="@+id/unlike_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/like_button"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:background="?attr/colorPrimary"
+            android:text="Je n'aime pas"
+            android:textColor="@color/cardview_light_background" />
+
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/price34"
+            android:layout_alignBottom="@+id/price34"
+            android:layout_alignEnd="@+id/unlike_button"
+            android:background="@color/colorPrimary"
+            android:text="    Commander    "
+            android:textColor="@color/cardview_light_background" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

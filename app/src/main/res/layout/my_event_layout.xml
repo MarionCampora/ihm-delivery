@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/layoutt_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/gridView_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/image_event"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:cropToPadding="false" />
+
+
+        <TextView
+            android:id="@+id/title_event"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/image_event"
+            android:layout_marginTop="13dp"
+            android:layout_toStartOf="@+id/like_button"
+            android:layout_weight="0.11"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="  Participer à cet évènement  "
+            android:textColor="@color/cardview_light_background"
+            android:layout_below="@+id/date"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/title_event"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ToBeOrToHave</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="city">Sophia-Antipolis</string>
+    <string name="agenda">Evènements</string>
+    <string name="news">Nouveautés</string>
+    <string name="products">Produits</string>
+    <string name="orders">Commandes</string>
+    <string name="home">Accueil</string>
+    <string name="prodnews">Tes produits</string>
+    <string name="rdv">Tes rendez-vous</string>
+</resources>

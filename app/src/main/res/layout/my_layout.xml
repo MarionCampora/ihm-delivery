@@ -69,23 +69,21 @@
             android:id="@+id/like_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/unlike_button"
-            android:layout_alignTop="@+id/image34"
             android:background="@color/colorPrimary"
             android:text="J'aime"
-            android:textColor="@color/cardview_light_background" />
+            android:textColor="@color/cardview_light_background"
+            android:layout_above="@+id/unlike_button"
+            android:layout_alignParentEnd="true" />
 
         <Button
             android:id="@+id/unlike_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/like_button"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="15dp"
             android:background="?attr/colorPrimary"
             android:text="Je n'aime pas"
-            android:textColor="@color/cardview_light_background" />
+            android:textColor="@color/cardview_light_background"
+            android:layout_above="@+id/order_button"
+            android:layout_alignParentEnd="true" />
 
         <Button
             android:id="@+id/order_button"

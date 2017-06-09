@@ -46,14 +46,16 @@ public class OrderListArticleAdapter extends ArrayAdapter {
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (convertView == null) {
+        final List orders = orderer.orderer();
+
+        if (convertView == null && !orders.isEmpty()) {
             convertView = inflater.inflate(R.layout.my_order_layout, null);
+        } else if (convertView == null && orders.isEmpty()) {
+            convertView = inflater.inflate(R.layout.home_fragment, null);
         }
 
-        List orders = orderer.orderer();
 
         final Product product = (Product) orders.get(position);
-        //final Product product = (Product) getItem(position);
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.image_order);
         imageView.setImageResource(product.getPicture());
@@ -65,6 +67,13 @@ public class OrderListArticleAdapter extends ArrayAdapter {
         categoryText.setText(product.getPrice());
 
         final Button unorder_button = (Button) convertView.findViewById(R.id.unorder_button);
+        final Button get_button = (Button) convertView.findViewById(R.id.get_button);
+
+        if (product.getName().equals("")) {
+            get_button.setVisibility(View.INVISIBLE);
+            unorder_button.setVisibility(View.INVISIBLE);
+        }
+
         unorder_button.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
@@ -75,7 +84,6 @@ public class OrderListArticleAdapter extends ArrayAdapter {
             }
         });
 
-        final Button get_button = (Button) convertView.findViewById(R.id.get_button);
         get_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +91,7 @@ public class OrderListArticleAdapter extends ArrayAdapter {
                 fragment.beginTransaction().replace(R.id.content_frame, new DayFragment()).commit();
             }
         });
+
 
         return convertView;
     }

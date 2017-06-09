@@ -48,8 +48,8 @@ public class ButtonArticleAdapter extends ArrayAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.my_layout, null);
         }
-        final Product product = (Product) getItem(position);
-        //final Product product = (Product) prod.liked().get(position);
+        //final Product product = (Product) getItem(position);
+        final Product product = (Product) prod.liked().get(position);
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.image34);
         imageView.setImageResource(product.getPicture());
@@ -70,11 +70,11 @@ public class ButtonArticleAdapter extends ArrayAdapter {
         final Button like_button = (Button) convertView.findViewById(R.id.like_button);
         final Button unlike_button = (Button) convertView.findViewById(R.id.unlike_button);
         final Button order_button = (Button) convertView.findViewById(R.id.order_button);
+        unlike_button.setVisibility(INVISIBLE);
 
         like_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                product.setLiked(1);
                 like_button.setBackgroundColor(Color.parseColor("#4a2612"));
                 unlike_button.setVisibility(INVISIBLE);
                 prod.getEditorLike().putString(product.getName(),product.getName()).commit();
@@ -84,7 +84,6 @@ public class ButtonArticleAdapter extends ArrayAdapter {
         unlike_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                product.setLiked(2);
                 unlike_button.setBackgroundColor(Color.parseColor("#4a2612"));
                 like_button.setVisibility(INVISIBLE);
                 prod.getEditorUnlike().putString(product.getName(),product.getName()).commit();

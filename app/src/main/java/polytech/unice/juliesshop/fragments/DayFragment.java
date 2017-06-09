@@ -52,7 +52,7 @@ public class DayFragment extends Fragment {
                         "http://chart.apis.google.com/chart?cht=bvs&chs=150x200&chd=t:19,20,40,55,5&chl= 8-10 | 10-12 | 12-14 | 14-16 | 16-18 &chco=00A5C6"
                         );
                 break;
-            case THURSDAY:
+            case TUESDAY:
                 myView = inflater.inflate(R.layout.day_layout, container, false);
                 createView("Mardi",
                         "http://chart.apis.google.com/chart?cht=bvs&chs=150x200&chd=t:10,40,20,25,75&chl= 8-10 | 10-12 | 12-14 | 14-16 | 16-18 &chco=00A5C6");
@@ -62,7 +62,7 @@ public class DayFragment extends Fragment {
                 createView("Mercredi",
                         "http://chart.apis.google.com/chart?cht=bvs&chs=150x200&chd=t:80,60,20,25,72&chl= 8-10 | 10-12 | 12-14 | 14-16 | 16-18 &chco=00A5C6");
                 break;
-            case TUESDAY:
+            case THURSDAY:
                 myView = inflater.inflate(R.layout.day_layout, container, false);
                 createView("Jeudi",
                         "http://chart.apis.google.com/chart?cht=bvs&chs=150x200&chd=t:40,60,26,25,32&chl= 8-10 | 10-12 | 12-14 | 14-16 | 16-18 &chco=00A5C6");

@@ -42,11 +42,11 @@ public class Product {
     public List<Product> products() {
         Product hp = new Product("Harry Potter", "15.52 €", 0, R.drawable.hp, true, false, 0);
         produits.add(hp);
-        Product celine = new Product("Celine Dion", "12.45 €", 0, R.drawable.celine, false, false, 1);
+        Product celine = new Product("Celine Dion", "12.45 €", 0, R.drawable.celine, true, false, 1);
         produits.add(celine);
         Product gardiens = new Product("Les Gardiens de la Galaxie", "42.00 €", 0, R.drawable.gardiens, true, true, 2);
         produits.add(gardiens);
-        Product jul = new Product("Jul", "0.01 €", 0, R.drawable.jul, true, false, 3);
+        Product jul = new Product("Jul", "0.01 €", 0, R.drawable.jul, false, false, 3);
         produits.add(jul);
         Product lion = new Product("Le roi lion", "19.17 €", 0, R.drawable.lion, false, true, 4);
         produits.add(lion);
@@ -83,7 +83,7 @@ public class Product {
             }
             //return new Product("lol", String.valueOf(c), 1, R.drawable.lion, true, true, 2);
         }
-        return new Product();
+        return new Product("","",0,0,false,false,42);
     }
 
 
